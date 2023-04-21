@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box; /*фиксира размера, за да не се променят разстоянията*/
+}
+
+.daniLogo{
+    width: 20%;
+    height: auto;
+}
+
+.nav-link{
+    font-size: 20px;
+    transition: 0.2s;
+}
+.nav-link:hover{
+    color: #c94312 !important;
+}
