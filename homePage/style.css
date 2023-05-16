@@ -4,6 +4,9 @@
     font-family: 'Lato', sans-serif;
     box-sizing: border-box; /*фиксира размера, за да не се променят разстоянията*/
 }
+body {
+    background-color: #3E142A;
+}
 
 .daniLogo{
     width: 20%;
@@ -17,3 +20,14 @@
 .nav-link:hover{
     color: #c94312 !important;
 }
+.navbar{
+    background-color: #423C5E !important;
+}
+#myVideo{
+    filter: brightness(20%);
+}
+.navbar-brand{
+    width: 40%;
+    height: auto;
+}
+
