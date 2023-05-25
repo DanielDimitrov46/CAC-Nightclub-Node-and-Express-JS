@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box; /*фиксира размера, за да не се променят разстоянията*/
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.myDisco {
+    filter: brightness(80%);
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5); !* Прозрачен фон *!*/
+    color: bisque;
+    text-align: center;
+}
+
+.text-overlay p {
+    font-family: 'Bad Script', cursive;
+    font-size: 1.5em;
+    padding: 10px;
+    /*margin: 0;*/
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.field {
+    background-color: #240018;
+    padding: 10px;
+    text-align: center;
+
+}
+.field p{
+    color: white;
+    font-family: 'Bad Script', cursive;
+    font-size: 1.5em;
+}

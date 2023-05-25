@@ -1,0 +1,17 @@
+.places{
+    width: 85%;
+    height: auto;
+}
+/*.reservation{*/
+/*    background-image: url(../img/dj.jpg);*/
+/*}*/
+.formImage{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+    /*font-family: Lato, cursive;*/
+    font-size: 2.5em;
+}
