@@ -4,51 +4,70 @@
     font-family: 'Lato', sans-serif;
     box-sizing: border-box; /*фиксира размера, за да не се променят разстоянията*/
 }
+
 body {
     /*background-color: #240018;*/
+    /*animation: fly-up 1s ease-out;*/
+    /*animation-fill-mode: both;*/
+    /*opacity: 0;*/
 }
 
-.daniLogo{
+.daniLogo {
     width: 10%;
     height: auto;
 }
 
-.nav-link{
+.nav-link {
     font-size: 20px;
     transition: 0.2s;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: #c94312 !important;
 }
-.navbar{
+
+.navbar {
     /*background-color: #423C5E !important;*/
-   /*background-color: #2E2E3A;*/
-   background-color: #240018;
+    /*background-color: #2E2E3A;*/
+    background-color: #240018;
 }
-#myVideo{
+
+#myVideo {
     filter: brightness(80%);
 }
-.navbar-brand{
+
+.navbar-brand {
     width: 40%;
     height: auto;
 }
 
 .video-container {
-  position: relative;
+    position: relative;
 }
 
 .video-container video {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .overlay {
-  position: absolute;
-  top: 65%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+
+@keyframes fly-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 

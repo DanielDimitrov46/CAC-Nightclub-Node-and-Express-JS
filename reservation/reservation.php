@@ -20,7 +20,79 @@ include("../header.php")
 ?>
 <body>
 <h1>Visit and reserve your place. You don't have enough time!</h1>
-<img class="places" src="../img/inside.1.png" alt="">
+<div class="forReservation">
+    <img class="places" src="../img/inside.1.png" alt="">
+  <div id="tableMap" class="table-grid"></div>
+</div>
+
+<!--  <p>Total Count: <span id="totalCount"></span></p>-->
+
+  <script>
+    // Table data (dummy data for demonstration)
+    const rows = 3;
+    const columns = 8;
+    const totalTables = rows * columns;
+    const tables = [];
+    const reservedPositions = [];
+    let index = 0;
+
+    for (let i = 1; i <= totalTables; i++) {
+      tables.push({ id: i, label: `T${i}`, status: 'available' });
+    }
+
+    // Render table map
+    const tableMapContainer = document.getElementById('tableMap');
+    // const totalCountElement = document.getElementById('totalCount');
+
+    tables.forEach(table => {
+      const tableElement = document.createElement('div');
+      tableElement.className = `table ${table.status}`;
+      tableElement.setAttribute('data-table-id', table.id);
+      tableElement.addEventListener('click', () => reserveTable(table.id));
+      const tableLabel = document.createElement('div');
+      tableLabel.className = 'table-label';
+      tableLabel.textContent = table.label;
+      tableElement.appendChild(tableLabel);
+      tableMapContainer.appendChild(tableElement);
+    });
+
+    // updateTotalCount();
+
+    // Table reservation function
+    function reserveTable(tableId) {
+      const tableElement = document.querySelector(`[data-table-id="${tableId}"]`);
+      const table = tables.find(t => t.id === tableId);
+      let currentSelection = 0;
+
+      if (table.status === 'available') {
+        table.status = 'reserved';
+        tableElement.classList.remove('available');
+        tableElement.classList.add('reserved');
+        currentSelection = tableId;
+        reservedPositions.push(currentSelection);
+        console.log(`Table ${tableId} reserved.`);
+      } else if (table.status === 'reserved') {
+        table.status = 'available';
+        currentSelection = tableId;
+        index = reservedPositions.indexOf(currentSelection);
+        reservedPositions.splice(index,1)
+        tableElement.classList.remove('reserved');
+        tableElement.classList.add('available');
+        console.log(`Table ${tableId} released.`);
+      }
+        console.log(reservedPositions);
+
+      // updateTotalCount();
+      document.getElementById('place').value = reservedPositions.toString();
+    }
+
+    // Update total count
+    function updateTotalCount() {
+      const reservedTables = tables.filter(table => table.status === 'reserved');
+      totalCountElement.textContent = reservedTables.length;
+
+    }
+  </script>
 <div class="container-image" style="background-image: url('../img/dj.jpg')">
     <div class="mask d-flex align-items-center h-100 ">
     <div class="container h-100">
@@ -43,8 +115,8 @@ include("../header.php")
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="number" id="form3Example4cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cg">Enter wanted place from the picture</label>
+                  <input type="text" id="place" class="form-control form-control-lg" readonly/>
+                  <label class="form-label" for="place">Enter wanted place from the picture</label>
                 </div>
 
                 <div class="form-outline mb-4">
