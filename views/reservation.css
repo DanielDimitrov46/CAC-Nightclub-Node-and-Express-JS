@@ -1,48 +1,85 @@
-.places{
+.places {
     width: 85%;
     height: auto;
 }
+
 /*.reservation{*/
 /*    background-image: url(../img/dj.jpg);*/
 /*}*/
-.formImage{
+.formImage {
     width: 100%;
 }
 
-h1{
+h1 {
     text-align: center;
     font-family: 'Bad Script', cursive;
     /*font-family: Lato, cursive;*/
     font-size: 2.5em;
 }
+
 .table-grid {
-      display: grid;
-      grid-template-columns: repeat(3,60px);
-      gap: 3px;
-      justify-items: center;
-        float: right;
-    }
-    .table {
-      width: 60px;
-      height: 60px;
-      background-color: #ccc;
-      border-radius: 50%;
-    }
-    .table.available {
-      background-color: #a0dca0;
-    }
-    .table.reserved {
-      background-color: #ff7f7f;
-    }
-    .table-label {
-      text-align: center;
-      font-weight: bold;
-    }
-    .forReservation{
-        display: inline-block;
-    }
-    /*@media (min-width: 500px){*/
-    /* .forReservation{*/
-    /*    width: 50%;*/
-    /*}*/
-    /*}*/
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 3px;
+    justify-items: center;
+    float: right;
+}
+
+.table {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.table.available {
+    background-color: #a0dca0;
+}
+
+.table.reserved {
+    background-color: #ff7f7f;
+}
+
+.table-label {
+    text-align: center;
+    font-weight: bold;
+}
+
+.forReservation {
+    display: inline-block;
+}
+
+h3, h4 {
+    color: orange;
+}
+
+
+.text-decoration-none {
+    position: relative;
+    display: inline-block;
+    color: green;
+
+}
+
+.text-decoration-none:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+}
+
+.text-decoration-none:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+footer {
+    /*background-color: #240018 !important;*/
+}

@@ -8,34 +8,34 @@ const path = require('path');
 const mime = require('mime');
 
 app.use(express.json()); // Add this line to parse JSON-encoded bodies
-app.use(express.urlencoded({ extended: true })); // Add this line to parse URL-encoded form data
+app.use(express.urlencoded({extended: true})); // Add this line to parse URL-encoded form data
 
 
 // for paths to load files and their styles -d
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'img')));
 // Serve the index.html file
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 // Serve the style.css file
-app.get('/style.css', function(req, res) {
+app.get('/style.css', function (req, res) {
     res.setHeader('Content-Type', mime.getType('style.css'));
     res.sendFile(path.join(__dirname, 'views/style.css'));
 });
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'views/about.html'));
 });
 // Serve the style.css file
-app.get('/style.css', function(req, res) {
+app.get('/style.css', function (req, res) {
     res.setHeader('Content-Type', mime.getType('about.css'));
     res.sendFile(path.join(__dirname, 'views/about.css'));
 });
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'views/reservation.html'));
 });
 // Serve the style.css file
-app.get('/reservation.css', function(req, res) {
+app.get('/reservation.css', function (req, res) {
     res.setHeader('Content-Type', mime.getType('reservation.css'));
     res.sendFile(path.join(__dirname, 'views/reservation.css'));
 });
@@ -43,7 +43,7 @@ app.get('/reservation.css', function(req, res) {
 
 // Handle form submission
 app.post('/send-email', (req, res) => {
-    const { name, email, places, people } = req.body;
+    const {name, email, places, people} = req.body;
     // Create a nodemailer transporter
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -76,6 +76,7 @@ app.post('/send-email', (req, res) => {
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });
+// ,'192.168.65.143' || 'localhost'
 
 //
 // const transporter = nodemailer.createTransport({
