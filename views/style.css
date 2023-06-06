@@ -13,9 +13,11 @@ body {
 }
 
 .daniLogo {
-    width: 10%;
+    width: 8%;
     height: auto;
+    /*scale: 50%;*/
 }
+
 
 .nav-link {
     font-size: 20px;
@@ -50,13 +52,16 @@ body {
     height: auto;
 }
 
-.overlay {
+.overlay p{
     position: absolute;
-    top: 65%;
-    left: 40%;
+    top: 85%;
+    left: 10%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    font-family: 'Bad Script', cursive;
+    font-size: 1.5em;
+    padding: 10px;
+    color: bisque;
 }
 
 

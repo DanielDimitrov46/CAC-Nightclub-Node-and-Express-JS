@@ -1,5 +1,17 @@
 {
+  "name": "projetc_final_for_graduation_express_node",
+  "version": "1.0.0",
+  "description": "Project for night club",
+  "main": "index.js",
+  "scripts": {
+    "test": "kpp"
+  },
+  "author": "Daniel",
+  "license": "ISC",
   "dependencies": {
-    "nodemailer": "^6.9.2"
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mime": "^3.0.0",
+    "nodemailer": "^6.9.3"
   }
 }
