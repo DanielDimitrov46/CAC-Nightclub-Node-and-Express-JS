@@ -39,6 +39,14 @@ app.get('/reservation.css', function (req, res) {
     res.setHeader('Content-Type', mime.getType('reservation.css'));
     res.sendFile(path.join(__dirname, 'views/reservation.css'));
 });
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'views/partners.html'));
+});
+// Serve the style.css file
+app.get('/partners.css', function (req, res) {
+    res.setHeader('Content-Type', mime.getType('partners.css'));
+    res.sendFile(path.join(__dirname, 'views/partners.css'));
+});
 
 
 // Handle form submission
