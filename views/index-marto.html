@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Icy Drinks</title>
+  <link rel="stylesheet" href="./style-marto.css">
+  <link rel="icon" type="image/x-icon" href="icy-logo1.png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-marti">
+      <img class = "icy-logo1" src="icy-logo1.png" alt="...">
+      <!-- <h1>Icy Drinks</h1> -->
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header">
+    <div class="youtube-video">
+      <video class="myDisco" src="martichko.mp4" autoplay muted loop></video>
+    </div>
+    <div class="header-content">
+      <h1 class="logo">Icy Drinks</h1>
+      <p class="logo">Find your favorite energy drinks here!</p>
+    </div>
+  </div>
+  
+
+  <div class="product-container">
+    <div class="product">
+      <div class="product-image">
+        <img src="https://blackdiamond.bg/wp-content/uploads/2022/09/3D.png" alt="Energy Drink 1">
+      </div>
+      <h2 class="product-name">Energy Drink 1</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae finibus velit.</p>
+      <p class="product-price">$2.99</p>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-image">
+        <img src="https://blackdiamond.bg/wp-content/uploads/2022/09/3D.png" alt="Energy Drink 2">
+      </div>
+      <h2 class="product-name">Energy Drink 2</h2>
+      <p class="product-description">Praesent tempor, ipsum a finibus luctus, erat urna dapibus magna.</p>
+      <p class="product-price">$3.49</p>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-image">
+        <img src="https://blackdiamond.bg/wp-content/uploads/2022/09/3D.png" alt="Energy Drink 3">
+      </div>
+      <h2 class="product-name">Energy Drink 3</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae finibus velit.</p>
+      <p class="product-price">$4.99</p>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-container">
+    <div class="product">
+      <div class="product-image">
+        <img src="https://blackdiamond.bg/wp-content/uploads/2022/09/3D.png"alt="Energy Drink 4">
+      </div>
+      <h2 class="product-name">Energy Drink 4</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae finibus velit.</p>
+      <p class="product-price">$2.99</p>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-image">
+        <img src="https://blackdiamond.bg/wp-content/uploads/2022/09/3D.png" alt="Energy Drink 5">
+      </div>
+      <h2 class="product-name">Energy Drink 5</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae finibus velit.</p>
+      <p class="product-price">$0.99</p>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="product-image">
+        <img src="https://blackdiamond.bg/wp-content/uploads/2022/09/3D.png" alt="Energy Drink 6">
+      </div>
+      <h2 class="product-name">Energy Drink 6</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae finibus velit.</p>
+      <p class="product-price">$3.99</p>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2023 Energy Drink Shop. All rights reserved. Partnered with ЕДНО ГОЛЯМО™ & CAC Nightclub™.</p>
+  </div>
+  <script>
+    // Find the parent element that contains all the "Add to Cart" buttons
+    const productContainer = document.querySelector('.product-container');
+  
+    // Add an event listener to the parent element
+    productContainer.addEventListener('click', function(event) {
+      // Check if the clicked element has the "add-to-cart-button" class
+      if (event.target.classList.contains('add-to-cart-button')) {
+        // Get the product ID from the data attribute
+        const productId = event.target.dataset.productId;
+  
+        // Perform the necessary actions to add the product to the cart
+        // You can use the productId to identify the specific product
+  
+        // Example: Alert a message indicating the product has been added
+        alert('Product added to cart: ' + productId);
+      }
+    });
+  </script>
+  
+</body>
+</html>
+

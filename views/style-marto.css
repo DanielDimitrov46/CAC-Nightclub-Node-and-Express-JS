@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(5,0,82);
+background: linear-gradient(90deg, rgba(5,0,82,1) 0%, rgba(126,126,129,1) 100%);
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  /* navbar css */
+  /* Add the following styles to your existing CSS */
+
+.navbar {
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-marto {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+
+  /*  */
+  .header, .footer {
+    color: #fff;
+    padding: 500px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 38px; /* Adjust the font size as needed */
+    font-weight: 600;
+    font-family: "Raleway", Arial, sans-serif;
+    text-align: center;
+    margin-top: 21%; /* Adjust the margin-top to center the logo vertically */
+    transform: translateY(-50%);
+  }
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 55px;
+    justify-items: center;
+    margin: 20px;
+  }
+  
+  .product {
+    width: 100%;
+    background-color: #d1cdcd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+    background: rgb(5,0,82);
+    background: linear-gradient(90deg, rgba(5,0,82,1) 0%, rgba(126,126,129,1) 100%);
+  }
+  
+  .product-image {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .product-image img {
+    width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .add-to-cart-button {
+    background: linear-gradient(to bottom, #ff6600, #ff8c00);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-button:hover {
+    background: linear-gradient(to bottom, #ff8c00, #ff6600);
+  }
+  
+  .footer {
+    padding: 10px;
+    text-align: center;
+  }
+  .header {
+    position: relative;
+  }
+  .header {
+    position: relative;
+    display: flex;
+  }
+  .header {
+    position: relative;
+    display: flex;
+  }
+  .header {
+    position: relative;
+  }
+  
+  .youtube-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .youtube-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #368BC1;
+    font-family: 'DO Stylish Baroque', sans-serif;
+
+  }
+  .icy-logo1{
+    width: 10%;
+    height: auto;
+  }
+  

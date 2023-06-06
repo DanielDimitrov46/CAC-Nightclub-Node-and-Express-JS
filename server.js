@@ -47,6 +47,14 @@ app.get('/partners.css', function (req, res) {
     res.setHeader('Content-Type', mime.getType('partners.css'));
     res.sendFile(path.join(__dirname, 'views/partners.css'));
 });
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'views/index-marto.html'));
+});
+// Serve the style.css file
+app.get('/style-marto.css', function (req, res) {
+    res.setHeader('Content-Type', mime.getType('style-marto.css'));
+    res.sendFile(path.join(__dirname, 'views/style-marto.css'));
+});
 
 
 // Handle form submission
